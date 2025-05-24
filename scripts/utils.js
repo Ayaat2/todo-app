@@ -18,13 +18,13 @@ export const renderTaskList=(tasks)=>{
         taskList+=`
     <li class="TaskList__taskContent${task.isCompleted ? " TaskList__taskContent--isActive": ""}">
         <div class="TaskList__checkbox" tabindex="0" role="button">
-            <img class="TaskList__checkboxImg" src="./assets/icon-checkmark.svg" alt="icon-checkmark"/>
+            <img class="TaskList__checkboxImg" src="/assets/icon-checkmark.svg" alt="icon-checkmark"/>
         </div>
         <div class="TaskList__valueContent">
             <p class="TaskList__value">
                 ${task.value}
             </p>
-            <img class="TaskList__deleteIcon" src="./assets/icon-basket.svg" alt="basket-icon"/>
+            <img class="TaskList__deleteIcon" src="/assets/icon-basket.svg" alt="basket-icon"/>
         </div>
     </li>
     `
@@ -79,7 +79,7 @@ export const initDataOnStartup=()=>{
 export const renderEmptyState=()=>{
     taskListElement.innerHTML=`
     <li class='EmptyList' />
-        <img class="EmptyList__img" src='./assets/icon-empty.svg' alt='list is empty'/>
+        <img class="EmptyList__img" src='/assets/icon-empty.svg' alt='list is empty'/>
         <p> قائمة المهام فارغة </p>
     </li>
     `;
