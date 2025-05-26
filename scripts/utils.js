@@ -78,8 +78,8 @@ export const initDataOnStartup=()=>{
 
 export const renderEmptyState=()=>{
     taskListElement.innerHTML=`
-    <li class='EmptyList' />
-        <img class="EmptyList__img" src='/todo-app/assets/icon-empty.svg' alt='list is empty'/>
+    <li class='EmptyList'>
+        <img class="EmptyList__img" src="/todo-app/assets/icon-empty.svg" alt='list is empty'/>
         <p> قائمة المهام فارغة </p>
     </li>
     `;
