@@ -11,8 +11,8 @@
         </div>
     </li>
     `}),a.innerHTML=e,f.value=""},y=(t,e)=>{if(confirm("هل انت متأكد من حذف المهمة")===!1)return;const n=l("tasks");n.splice(e,1),d("tasks",n),m(n)},h=t=>{t.preventDefault();const e=f.value;if(!e)return;const s={value:e,isCompleted:!1},n=l("tasks")||[];n.push(s),d("tasks",n),m(n)},d=(t,e)=>{localStorage.setItem(t,JSON.stringify(e))},S=()=>{l("darkModeFlag")&&g(),m(l("tasks"))},E=()=>{a.innerHTML=`
-    <li class='EmptyList' />
-        <img class="EmptyList__img" src='/todo-app/assets/icon-empty.svg' alt='list is empty'/>
+    <li class='EmptyList'>
+        <img class="EmptyList__img" src="/todo-app/assets/icon-empty.svg" alt='list is empty'/>
         <p> قائمة المهام فارغة </p>
     </li>
     `},m=t=>{t!=null&&t.length?(v(t),b()):E()},p=(t,e)=>{const s=l("tasks");t.currentTarget.parentElement.classList.toggle("TaskList__taskContent--isActive"),s[e].isCompleted=!s[e].isCompleted,d("tasks",s)},b=()=>{L().forEach((t,e)=>{t.addEventListener("click",s=>y(s,e))}),T().forEach((t,e)=>{t.addEventListener("click",s=>p(s,e)),t.addEventListener("keydown",s=>{s.key==="Enter"&&p(s,e)})})},C=()=>{_.addEventListener("click",g),k==null||k.addEventListener("click",h),i==null||i.addEventListener("click",()=>{a==null||a.classList.toggle("TaskList__list--hideCompleted"),i==null||i.classList.toggle("TaskList__link--isActive")})};S();C();
